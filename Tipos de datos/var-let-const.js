@@ -10,7 +10,13 @@ console.log(nombreCompleto)
 
 let x,y;
 x = y = 10;
-console.log(x,y)
+console.log(x,y);
 
 z = x + y;
-console.log(z)
+console.log(z);
+
+let nomCompleto = nombre + " " + apellido;
+console.log(nomCompleto);
+
+let _2nombreCompleto = nombre.concat(" ", apellido);
+console.log(_2nombreCompleto);
