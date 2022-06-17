@@ -8,5 +8,5 @@ function esMayor(edad){
     }
 }
 
-console.log(esMayor(18));
+console.log(esMayor(20));
 
