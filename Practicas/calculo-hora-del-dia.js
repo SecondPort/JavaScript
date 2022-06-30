@@ -17,3 +17,7 @@ else if ( hora >= 0 && hora < 6){
     mensaje = "Durmiendo";
     console.log(mensaje);
 }
+else{
+    mensaje = "No es una hora valida";
+    console.log(mensaje);
+}
