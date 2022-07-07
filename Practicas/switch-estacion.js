@@ -12,7 +12,7 @@ switch (mes) {
         estacion = "verano";
         break;
     case 10: case 11: case 12:
-        estacion = "otonio";
+        estacion = "otoño";
         break;
     default:
         estacion = "valor desconocido";
