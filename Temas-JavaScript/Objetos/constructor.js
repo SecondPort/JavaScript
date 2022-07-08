@@ -12,3 +12,6 @@ console.log(hijo);
 
 let madre = new Persona('Maria','Perez',40);
 console.log(madre);
+
+padre.nombre = 'Nada';
+console.log(padre);
