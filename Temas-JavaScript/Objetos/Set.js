@@ -20,4 +20,5 @@ console.log(persona.lang);
 //-------------------------//
 persona.lang = 'en_us';
 console.log(persona.lang);
+console.log(persona.idioma);
 
