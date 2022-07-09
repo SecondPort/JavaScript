@@ -24,6 +24,9 @@ class Vehiculo {
     }
     //sobreescribimos el toString de la clase Object
     toString() {
+        //se aplpica polimorfismo (multiples formas en tiempo de ejecucion)
+        //el metodo que se ejecuta depende si es una referencia de tipo padre
+        //o de tipo hijo
         return `${this.mostrar()}`;
     }
 }
