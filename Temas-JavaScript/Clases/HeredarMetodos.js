@@ -19,6 +19,10 @@ class Vehiculo {
     set color(color) {
         this._color = color;
     }
+
+    mostrar() {
+        return `${this._marca} ${this._modelo} ${this._color}`;
+    }
 }
 
 class Auto extends Vehiculo {
@@ -35,5 +39,6 @@ class Auto extends Vehiculo {
 }
 
 let auto1 = new Auto("Ford", "Mustang", "Rojo", 5);
+console.log(auto1.mostrar());
 let nombre = auto1._marca;
 console.log(nombre);
