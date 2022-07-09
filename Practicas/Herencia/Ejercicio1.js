@@ -1,7 +1,7 @@
+
 class Persona {
-    static cont = 0;
     constructor(nombre, apellido, edad) {
-        this._idPersona = ++Persona.cont;
+        this._idPersona = ++ContPersona;
         this._nombre = nombre;
         this._apellido = apellido;
         this._edad = edad;
@@ -30,14 +30,13 @@ class Persona {
     toString() {
         return "Persona[idPersona=" + this._idPersona + ", nombre=" + this._nombre + ", apellido=" + this._apellido + ", edad=" + this._edad + "]";
     }
-
+    
 }
 
 class Empleado extends Persona {
-    static contEmple = 0;
     constructor(nombre, apellido, edad, salario) {
         super(nombre, apellido, edad);
-        this._idEmpleado = ++Empleado.contEmple;
+        this._idEmpleado = ++ContEmpleado;
         this._salario = salario;
     }
     get idEmpleado() {
@@ -57,7 +56,7 @@ class Empleado extends Persona {
 class Cliente extends Persona{
     constructor(nombre, apellido, edad, deuda) {
         super(nombre, apellido, edad);
-        this._idCliente = ++Cliente.cont;
+        this._idCliente = ++ContCliente;
         this._deuda = deuda;
     }
     get idCliente() {
@@ -73,13 +72,29 @@ class Cliente extends Persona{
         return "Cliente[idCliente=" + this._idCliente + ", deuda=" + this._deuda + ", " + super.toString() + "]";
     }
 }
+let ContPersona = 0;
+let ContEmpleado = 0;
+let ContCliente = 0;
 
 //objetos
 let persona1 = new Persona("Juan", "Perez", 30);
 let persona2 = new Persona("Pedro", "Gomez", 40);
 
-let empleado1 = new Empleado("Juan", "Perez", 30, 1000);
-let empleado2 = new Empleado("Pedro", "Gomez", 40, 2000);
+console.log(persona1.toString());
+console.log(persona2.toString());
+
+
+let empleado1 = new Empleado("Pepe", "Perez", 30, 1000);
+let empleado2 = new Empleado("Raul", "Gomez", 40, 2000);
+
+console.log(empleado1.toString());
+console.log(empleado2.toString());
+
+let empleado3 = new Empleado("Juan", "Perez", 30, 1000);
+let empleado4 = new Empleado("Pedro", "Gomez", 40, 2000);
+console.log(empleado4.toString());
 
 let cliente1 = new Cliente("Juan", "Perez", 30, 1000);
 let cliente2 = new Cliente("Pedro", "Gomez", 40, 2000);
+console.log(cliente1.toString());
+console.log(cliente2.toString());
