@@ -1,4 +1,4 @@
-let sumar = (a, b) => {
+const sumar = (a, b) => {
     console.log(a + b);
     console.log("saludo");
 };
