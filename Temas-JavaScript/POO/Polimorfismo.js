@@ -17,7 +17,13 @@ class Gerente extends Empleado{
         return `${super.obtenerDetalles()} | Departamento: ${this._departamento}`;
     }
 }
+//polimorfismo: multiples formas de hacer una misma accion(llamar a una funcion,
+//que la puede llamar el padre o el hijo y se ejecuta segun quien la llame)
+function imprimir(clase){
+    console.log(clase.obtenerDetalles());
+}
 
+let empleado1 = new Empleado("Jose",1000);
 let gerente1 = new Gerente("Carlos",1000,"Ventas");
-console.log(gerente1);
-console.log(gerente1.obtenerDetalles());
+imprimir(empleado1);
+imprimir(gerente1);
