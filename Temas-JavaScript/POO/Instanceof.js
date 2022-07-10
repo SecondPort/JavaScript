@@ -1,4 +1,3 @@
-"use strict";
 class Empleado{
     constructor(nombre,sueldo){
         this._nombre=nombre;
@@ -19,30 +18,23 @@ class Gerente extends Empleado{
     }
 }
 
-class Vacio{
-    constructor(){
-        this._nombre="";
-        this._sueldo=0;
-    }
-    obtenerDetalles(){
-        return `Nombre: ${this._nombre} | Sueldo: ${this._sueldo}`;
-    }
-}
-
 //polimorfismo: multiples formas de hacer una misma accion(llamar a una funcion,
 //que la puede llamar el padre o el hijo y se ejecuta segun quien la llame)
-function imprimir(clase){
+function DeterminarTipo(clase){
     console.log(clase.obtenerDetalles());
     if(clase instanceof Gerente){
         //solo responde ante clases hijas
-        console.log("Es un objeto de tipo Gerente");
+        console.log("Es un objeto de clase Gerente");
+        console.log(clase._departamento);
     }
-    if(clase instanceof Empleado){
-        console.log("Es un objeto de tipo Empleado");
+    else if(clase instanceof Empleado){
+        console.log("Es un objeto de clase Empleado");
+        console.log(clase.departamento);
     }
 }
 
 let empleado1 = new Empleado("Jose",1000);
 let gerente1 = new Gerente("Carlos",1000,"Ventas");
-imprimir(empleado1);
-imprimir(gerente1);
+
+DeterminarTipo(empleado1);
+DeterminarTipo(gerente1);
