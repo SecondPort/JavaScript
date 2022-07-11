@@ -15,11 +15,18 @@
     <div id="valores"></div>
     <script>
         function mostrarValores() {
-            let form = document.forms["form"];
+/*             let form = document.forms["form"];
             let text = "";
             for (let elemento of form){
                 text += elemento.value + "<br/>";
             }
+            document.getElementById("valores").innerHTML = text; */
+            let form = document.getElementById("form");
+            let text = "";
+            let nombre = form["nombre"];
+            let apellido = form["apellido"];
+            text += nombre.value + "<br/>";
+            text += apellido.value + "<br/>";
             document.getElementById("valores").innerHTML = text;
         }
     </script>
