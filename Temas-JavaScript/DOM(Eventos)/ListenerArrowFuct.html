@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo</h1>
+    <br>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido">
+    <script>
+        let nombre = document.getElementById("nombre");
+        let apellido = document.getElementById("apellido");
+        nombre.addEventListener("focus", (event)=>{
+            event.target.style.background = "pink";
+        });
+        nombre.addEventListener("blur", (event)=>{
+            event.target.style.background = "white";
+        });
+        apellido.addEventListener("focus", function(){
+            this.style.background = "yellow";
+        });
+        apellido.addEventListener("blur", function(){
+            this.style.background = "white";
+        });
+    </script>
+</body>
+</html>
