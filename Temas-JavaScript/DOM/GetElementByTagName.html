@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM JavaScript</title>
+</head>
+<body>
+    <h1 id="Cabecero1">Ejemplo 1</h1>
+    <p id="parrafo1">Saludos</p>
+    <p>otro parrafo</p>
+
+
+    <script>
+        let _h1 = document.getElementById("Cabecero1");
+        let _p1 = document.getElementById("parrafo1");
+        let _p2 = document.getElementsByTagName("p");
+
+
+        console.log("numero parrafos: " + _p2.length);
+        for(let i = 0; i < _p2.length; i++){
+            console.log("parrafo " + i + ": " + _p2[i].innerHTML);
+        }
+    </script>
+</body>
+</html>
