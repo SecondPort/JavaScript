@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run:tuto": "ts-node tuto.ts",
+    "run:calculator": "ts-node calculator.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
