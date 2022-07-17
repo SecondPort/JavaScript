@@ -54,3 +54,23 @@ const calculatorCleanCode = (a:number, b:number, c:"sumar" | "multiplicar" | "di
 }
 
 calculatorCleanCode(1,3,"sumar");
+
+type op = "sumar" | "multiplicar" | "dividir";
+const calculatorCleanCode2 = (a:number, b:number, c:op) => {
+    if(!operaciones.includes(c)){
+        console.log("Operacion no valida");
+    }
+    if(c === "sumar"){
+        console.log("El resultado de la suma es: ",a + b);
+    }
+    if(c === "multiplicar"){
+        console.log("El resultado de la multiplicacion es: ",a * b);
+    }
+    if(c === "dividir"){
+        if(b === 0){
+            console.log("No se puede dividir por 0");
+        }
+        console.log("El resultado de la division es: ",a / b);
+    }
+
+}
