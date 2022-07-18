@@ -13,6 +13,9 @@ function mostrarPersonas(){
     document.getElementById("personas").innerHTML = texto;
 }
 
+/**
+ * It takes the values from the form and pushes them into the array.
+ */
 function agregarPersona(){
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
