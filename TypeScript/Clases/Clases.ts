@@ -1,4 +1,4 @@
-class Persona{
+/* class Persona{
     private nombre:string;
 
     constructor(nombre:string){
@@ -7,8 +7,8 @@ class Persona{
     getNombre():string{
         return this.nombre
     }
-}
+} */
 
-let persona1 = new Persona("Juan");
-let persona2 = new Persona("Pedro");
+/* let persona1 = new Persona("Juan");
+let persona2 = new Persona("Pedro"); */
 console.log(persona1.getNombre());
